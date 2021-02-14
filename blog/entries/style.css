@@ -1,0 +1,25 @@
+header  {
+    color: beige;
+}
+
+.wrapper {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(4, 1fr);
+}
+.ugh 
+{ grid-row: 1;
+grid-column: 1; 
+color: burlywood;}
+.job{
+    grid-row:3 ;
+    grid-column: 2;
+    color: cornsilk;
+}
+.her{
+    color: wheat;
+    grid-row: 2;
+    grid-column: 3;
+    background-color: green;
+}
