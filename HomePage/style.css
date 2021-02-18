@@ -33,7 +33,7 @@ body {
 .fisher{
     grid-row: 10/11;
     grid-column: 2/5;
-    z-index: 6;
+    z-index: 
 }
 .plate{
     grid-row: 10/11;
