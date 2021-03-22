@@ -10,7 +10,7 @@ body {
     width: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: 54%, 46%;
+    grid-template-columns: 460px, 430px;
     grid-template-rows: 1fr;
     overflow: hidden;
 }
@@ -30,6 +30,7 @@ body {
     display: grid;
     grid-template-rows: 1fr, 1fr, 1fr, 1fr;
     grid-column: 1fr, 1fr;
+    
     
 }
 .home {
