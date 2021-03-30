@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Collage</title>
     <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
-    
-    <div class="wrapper">
-        <!-- <div class="container">
-            <div class="draggable" draggable="true"> <img src="IMG/snail.png" alt="snail" width="50%"></div>
-        </div> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".draggable").draggable();
+        });
+    </script>
 
-    
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="snail draggable"> <img src="IMG/snail.png" alt="snail" height="5%"></div>
+
+
         <div class="left">
             <div class="homes">
                 <div class="house"><img src="IMG/house.png" alt="" width="100%"></div>
             </div>
-            <div class="home"> <img src="IMG/home.jpg" alt="" width="100%"></div> 
+            <div class="home"> <img src="IMG/home.jpg" alt="" width="100%"></div>
             <div class="mount"><img src="IMG/moutain.jpg" alt="" width="100%"></div>
             <div class="blurr-ob"><img src="IMG/blurr-oB.jpg" alt="" width="100%"></div>
             <div class="blurr-light"><img src="IMG/blurrylight.jpg" alt="blurry light" width="100%"></div>
@@ -41,7 +49,7 @@
             <div class="skywater"><img src="IMG/sky-water.jpg" alt="" width="100%"></div>
             <div class="sky"><img src="IMG/watersky.jpg" alt="" width="100%"></div>
             <div class="bubble"> <img src="IMG/bubble-wrap.jpg" alt="" width="100%"></div>
-        </div> 
+        </div>
 
         <div class="right">
             <div class="sunset"><img src="IMG/sunset-moutain.png" alt="" width="108%"></div>
@@ -51,9 +59,9 @@
             <div class="brown"><img src="IMG/browns.jpg" alt="" width="100%"></div>
             <div class="rocks"><img src="IMG/rock.jpg" alt="" width="100%"></div>
             <div class="switch">
-                <div class="raff"><img src="IMG/raff.png" alt="" width="100%"></div>
                 <div class="kitten"><img src="IMG/kitty.png" alt="" width="100%"></div>
-            </div> 
+            </div>
+            <div class="raff draggable"><img src="IMG/raff.png" alt="" width="100%"></div>
             <div class="bark"><img src="IMG/bark.jpg" alt="" width="100%"></div>
             <div class="toes"><img src="IMG/toes.jpg" alt="" width="100%"></div>
             <!-- <div class="sun"><img src="IMG/sun.jpg" alt="" width="180%"></div> -->
@@ -62,17 +70,17 @@
             <div class="cats"> <img src="IMG/cat.png" alt="" width="55%"></div>
             <div class="rs"><img src="IMG/r&s.jpg" alt="" width="130%"></div>
             <div class="bridge"><img src="IMG/bridge.jpg" alt="" width="50%"></div>
-            <!-- <div class="draggable" draggable="true">
-                <img src="IMG/snail.png" alt="" width="60%">
-             </div> -->
+            
         </div>
-        <div class="homepage"> <a href="/HomePage/index.html"><img src="IMG/sweater.jpg" alt="HOMEPAGE" width="100%"></div>
-        
+        <div class="homepage"> <a href="/HomePage/index.html"><img src="IMG/sweater.jpg" alt="HOMEPAGE" width="100%">
+        </div>
+
 
     </div>
-    
+
     <script>
-        alert ("Interactive Collage...A visual language of connection... drag your mouse to look for transformations")
+        alert("Interactive Collage...A visual language of connection... drag your mouse to look for transformations, images at bottom can be dispired through out collage.")
     </script>
 </body>
+
 </html>

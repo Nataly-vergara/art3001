@@ -129,37 +129,32 @@ body {
     width: 100%;
     display: grid;
     grid-row: 50%, 50%;
+    cursor: s-resize;
     
 }
 .kitten {
     grid-row: 1/2;
         
-        z-index: 8;
+        z-index: 6;
     grid-column: 1/3;
 }
 .raff{
-    grid-row: 2/3;
-    grid-column: 1/3;
+    grid-row: 4/6;
+    grid-column: 2/3;
     z-index: 7;
     align-self: flex-end;
-    cursor: no-drop;
+    cursor: move;
     }
-.raff:hover {
-        z-index: -3;
-    }
-.raff:hover:after{
-        z-index: -3;
-    }
-
 .kitten:hover {
-    grid-row: 2/3;
+    grid-row: 3/4;
     grid-column: 1/3;
     cursor: s-resize;
+    align-self: flex-end;
 }
 .bark {
     grid-column: 2/3;
     grid-row: 6/11;
-    z-index: 12;
+    z-index: 6;
 }
 .blurr-ob {
     grid-row: 4/6;
@@ -305,8 +300,9 @@ grid-column: 1/3;
     z-index: 50;
 }
 .snail {
+    z-index: 1000;
     position: absolute;
-    z-index: 500;
+    cursor: move;
 }
 .draggable{
     padding: 0;
@@ -319,10 +315,6 @@ grid-column: 1/3;
 .draggable.dragging {
     opacity: .5;
 
-}
-.container {
-    grid-row: 1/17;
-    grid-column: 1/4;
 }
 
 .white:hover{
