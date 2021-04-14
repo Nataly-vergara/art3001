@@ -1,0 +1,12 @@
+.container {
+    height: auto;
+    min-height: 100%;
+    width: 100vw;
+}
+div {
+    display: block;
+
+}
+.sunset {
+    position: absolute;
+}
