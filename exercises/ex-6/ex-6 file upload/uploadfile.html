@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    link
+</head>
+<body>
+    
+       
+        <input name="userfile" type="file">
+    </div>
+    <div class="component-article-section-content ui-body article-section-content"><p><input type="submit" value="Upload File"> </p>    </div>
+        <?php $ path = "files/"; $path = $path . basename( $_FILES['userfile']['name']);
+
+        if(move_uploaded_file($_FILES['userfile']['tmp_name'], $path)) { echo "Success uploading". basename($_FILES['userfile']['name']); } else{ echo "Error when uploading file."; } ?>
+    
+</body>
+</html>
