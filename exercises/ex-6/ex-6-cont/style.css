@@ -1,12 +1,49 @@
+body{
+    width: 100%;
+    /* height: 100; */
+    margin: 0;
+}
 .container {
-    height: auto;
-    min-height: 100%;
+    height: 100%;
     width: 100vw;
 }
-div {
-    display: block;
 
+.gr1 {
+    top: 30px;
+    left: 90px;
 }
-.sunset {
+
+.gr2 {
+    top: 50px;
+    left: 90px;
+}
+
+.gr3 {
+    top: -50px;
+    left: 40px;
+    background: green;
+    width: 100%;
+    height: 100%;
+}
+.dragDiv {
+    cursor: move;
+}
+
+
+.ui-wrapper{
+    display: inline-block !important;
+}
+.ui-draggable{
+    position: absolute !important;
+    display: inline-block !important;
+}
+
+button {
     position: absolute;
+    z-index: 2;
+}
+
+section {
+    width: 100%;
+    height: 100%;
 }

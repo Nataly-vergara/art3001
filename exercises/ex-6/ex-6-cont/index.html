@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" 
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
-<script type="text/javascript" 
-	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
-<link rel="stylesheet" type="text/css" 
-    href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
-    <script>$('.resizeDiv')
-        .draggable()
-        .resizable();
-	</script>
-        
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[class^=DRG]')
+                .draggable()
+            $('[class^=RSZ]')
+                .resizable();
+            var $btn = document.getElementById('btnScreenShot');
+            $btn.addEventListener('mousedown', onScreenShotClick);
+
+            function download(canvas, filename) {
+                // create an "off-screen" anchor tag
+                const a = document.createElement('a');
+
+                // the key here is to set the download attribute of the a tag
+                a.download = filename;
+
+                // convert canvas content to data-uri for link. When download
+                // attribute is set the content pointed to by link will be
+                // pushed as "download" in HTML5 capable browsers
+                a.href = canvas.toDataURL("image/png;base64");
+
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+
+            function onScreenShotClick(event) {
+                const element = document.querySelector("#capture");
+
+                html2canvas(element).then((canvas) => {
+                    download(canvas, 'screenshot');
+                });
+            }
+        });
+
+    </script>
+
     <title>Ex 6 cont</title>
 </head>
 <body>
+    <section id="capture">
     <div class="container">
-    <div class="sunset resizeDIV"><img src="../../ex-4/IMG/sun.jpg" alt="">
+        <div class="DRG1 gd1">
+            <img src="IMG/pie.png" class="RSZ1" alt="" style="width: 100%;height: 100%;">
+        </div>
+        <div class="DRG2 gr2">
+            <img src="IMG/pattern.jpg" class="RSZ2" alt="" style="width: 10vw; height: 20vw;">
+        </div>
+        <div class="DRG2 gr2">
+            <img src="IMG/pattern.jpg" class="RSZ2" alt="" style="width: 10vw; height: 20vw;">
+        </div>
+        <div class="DRG2 gr2">
+            <img src="IMG/pink-smudge.jpg" class="RSZ2" alt="" style="width: 10vw; height: 20vw;">
+        </div>
     </div>
-
-    </div>
+    </section>
+    <footer>
+        <button type="button" class="btnScreenShot" id="btnScreenShot">Take a Screenshot</button>
+    </footer>
 </body>
+
 </html>
