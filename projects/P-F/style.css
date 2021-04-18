@@ -1,0 +1,94 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+.container{
+    height:90vh ;
+    width: 100vw;}
+
+    
+button {
+z-index: 100;
+background-color: rgba(19, 89, 54, 0.776);
+color: lemonchiffon;
+} 
+.ui-wrapper{
+        display: inline-block !important;
+    }
+ .ui-draggable{
+        position: absolute !important;
+        display: inline-block !important;
+        cursor: move;
+    }
+.bark {
+    left: 90vw;
+}
+.Balcony{
+    left: 14vw;
+}
+.BWtree {
+    left: 14vw;
+    top: 52vh;
+}
+.MRI {
+    left: 37.8vw;
+    top: 17vh;
+}
+.frozen {
+    left: 44vw;
+}
+.life {
+    right: 25vw;
+}
+.stream {
+    right: 10vw;
+}
+.window {
+    left: 44vw;
+    top: 46vh;
+}
+.cat{
+    left: 18vw;
+    top: 23vh;
+}
+.feet {
+    top: 46vh;
+    right: 6vw;
+}
+.set {
+   top: 17.5vh; 
+   left: 57.8vw;
+}
+.chair {
+    top: 76vh;
+    right: 20vw;
+}
+.bag {
+    top: 80.5vh;;
+    right: 10vw;
+}
+.pipe{
+    top: 46vh;
+    left: 44vw;
+}
+.drawn {
+    right: 2.1vw;
+    top: 27vh;
+}
+.knob {
+    left: 2vw;
+    top: 70vh;
+}
+.dog {
+    left: 44vw;
+    top: 86vh;
+}
+.shatter {
+    right: 0vw;
+    top: 46vh;
+}
+.fly {
+    top: 90vh;
+    left: 51vw;
+}

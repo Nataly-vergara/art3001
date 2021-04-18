@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[class^=DRG]')
+                .draggable()
+            $('[class^=RSZ]')
+                .resizable();
+            var $btn = document.getElementById('btnScreenShot');
+            $btn.addEventListener('mousedown', onScreenShotClick);
+
+            function download(canvas, filename) {
+                // create an "off-screen" anchor tag
+                const a = document.createElement('a');
+
+                // the key here is to set the download attribute of the a tag
+                a.download = filename;
+
+                // convert canvas content to data-uri for link. When download
+                // attribute is set the content pointed to by link will be
+                // pushed as "download" in HTML5 capable browsers
+                a.href = canvas.toDataURL("image/png;base64");
+
+                a.style.display = 'none';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+
+            function onScreenShotClick(event) {
+                const element = document.querySelector("#capture");
+
+                html2canvas(element).then((canvas) => {
+                    download(canvas, 'screenshot');
+                });
+            }
+        });
+
+    </script>
+    <title>Collage Maker</title>
+</head>
+
+<body>
+    <button type="button" class="btnScreenShot" id="btnScreenShot">ScreenShot Your Creation</button>
+    <div class="container" id="capture">
+        <div class="DRG1 snail"><img src="IMG/bW-snail.jpg" alt="" class="RSZ1" style="width: 14vw; height: 100vh;" ></div>
+        <div class="DRG11 feet"><img src="IMG/feet-cat.jpg" alt=""class="RSZ11" style="width: 15vw; height: 43vh;"></div>
+        <div class="DRG6 stream"><img src="IMG/IMG_0886.jpg" alt=""class="RSZ6" style="width: 27vw; height: 43.5vh;"></div>
+        <div class="DRG9 window"><img src="IMG/bed-wind.jpg" alt=""class="RSZ9" style="width: 38.5vw; height: 30vh;"></div>
+        <div class="DRG2 bark"><img src="IMG/bark.jpg" alt="" class="RSZ2" style="width: 10vw; height: 100vh;" ></div>
+        <div class="DRG3 Balcony"><img src="IMG/balcony.jpg" alt=""class="RSZ3" style="width: 30vw; height: 50vh;" ></div>
+        <div class="DRG13 chair"><img src="IMG/blue-chair.jpg" alt=""class="RSZ13" style="width: 36vw; height: 26.9vh;"></div>
+        <div class="DRG10 cat"><img src="IMG/cat-screen.jpg" alt=""class="RSZ10" style="width: 18.5vw; height: 18vh;"></div>
+        <div class="DRG4 BWtree"><img src="IMG/WB-tree.jpg" alt=""class="RSZ4" style="width: 30vw; height: 51vh;" ></div>
+        <div class="DRG5 MRI"><img src="IMG/mri.jpg" alt=""class="RSZ5" style="width: 20vw; height: 29vh;"></div>
+        <div class="DRG6 frozen"><img src="IMG/frozen.jpg" alt=""class="RSZ6" style="width: 30vw; height: 15vh;"></div>
+        <div class="DRG8 life"><img src="IMG/tree.jpg" alt=""class="RSZ8" style="width: 12vw; height: 16vh;"></div>
+        <div class="DRG12 set"><img src="IMG/beach.jpg" alt=""class="RSZ12" style="width: 5.5vw; height: 28.5vh;"></div>
+        <div class="DRG13 bag"><img src="IMG/bag-grease.jpg" alt=""class="RSZ13" style="width: 10vw; height: 22.5vh;"></div>
+        <div class="DRG14 pipe"><img src="IMG/pipes.png" alt=""class="RSZ14" style="width: 29vw; height: 20vh;"></div>
+        <div class="DRG15 bask"><img src="IMG/basket.png" alt=""class="RSZ15" style="width: 14vw; height: 15.8vh;"></div>
+        <div class="DRG16 drawn"><img src="../../exercises/ex-6/ex-6-cont/IMG/pot-drawn.png" alt=""class="RSZ16" style="width: 12vw; height: 19vh;"></div>
+        <div class="DRG17 knob"><img src="IMG/handel.png" alt=""class="RSZ17" style="width: 8vw; height: 17vh;"></div>
+        <div class="DRG18 dog"><img src="IMG/doug.png" alt=""class="RSZ18" style="width: 20vw; height: 17vh;"></div>
+        <div class="DRG19 shatter"><img src="../../exercises/ex-4/IMG/tree-shatter.png" alt=""class="RSZ19" style="width: 15vw; height: 57vh;"></div>
+        <div class="DRG20 fly"><img src="IMG/Butterfly.png" alt=""class="RSZ19" style="width: 6vw; height: 8vh;"></div>
+
+        
+        
+        
+        
+       
+        
+        
+    
+        
+        
+        
+
+    </div>
+
+</body>
+
+</html>
