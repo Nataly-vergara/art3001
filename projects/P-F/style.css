@@ -84,6 +84,10 @@ color: lemonchiffon;
     left: 44vw;
     top: 86vh;
 }
+.gard{
+    left: 44vw;
+    top: 53vh;
+}
 .shatter {
     right: 0vw;
     top: 46vh;
@@ -91,4 +95,26 @@ color: lemonchiffon;
 .fly {
     top: 90vh;
     left: 51vw;
+}
+.holes {
+    right:14vw;
+    top: 95vh;
+}
+.dow {
+    left: 68.5vw;
+    top: 46vh;
+}
+.BIG {
+    left: 58vw;
+}
+.dye {
+    left: 8vw;
+    top: 63vh;
+}
+.head {
+    top: 28vh;
+    right: 20vw;
+}
+.AH {
+    left: 22vw;
 }
